@@ -18,5 +18,6 @@ streamlit.header('Fruitwise Fruit Advice')
 import requests
 frutycide_response=requests.get("https://www.fruityvice.com/api/fruit/watermelon")
 streamlit.text(frutycide_response.json())
-
+fruityvice_normalized=pandas.json_normalize(frutycide_response.json())
+streamlit.dataframe(fruityvice_normalized)
 
