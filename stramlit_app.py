@@ -13,3 +13,10 @@ my_fruit_list=my_fruit_list.set_index('Fruit')
 Fruits_sel=streamlit.multiselect("Pick Some Fruit:", list(my_fruit_list.index),['Avocado','Strawberries'])
 Fruits_to_show=my_fruit_list.loc[Fruits_sel]
 streamlit.dataframe(Fruits_to_show)
+
+streamlit.header('Fruitwise Fruit Advice')
+import requests
+frutycide_response=request.get("https://www.fruityvice.com/api/fruit/watermelon")
+streamlist.text(frutycide_response.json())
+
+
