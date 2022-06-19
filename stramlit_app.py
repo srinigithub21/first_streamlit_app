@@ -17,6 +17,6 @@ streamlit.dataframe(Fruits_to_show)
 streamlit.header('Fruitwise Fruit Advice')
 import requests
 frutycide_response=requests.get("https://www.fruityvice.com/api/fruit/watermelon")
-streamlist.text(frutycide_response.json())
+streamlit.text(frutycide_response.json())
 
 
